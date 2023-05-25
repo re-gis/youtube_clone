@@ -7,28 +7,36 @@ import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [searchInput, setSearchInput] = useState('')
-  
-  
+  const [searchInput, setSearchInput] = useState("");
+
   return (
     <div className="header">
       <div className="header_left">
         <MenuIcon />
         <Link to="/">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
-          alt=""
-          className="header_logo"
-        />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+            alt=""
+            className="header_logo"
+          />
         </Link>
       </div>
 
-      <div className="header_input">
+      <div
+        className="header_input"
+        style={{ height: "30px", alignItems: "center", paddingLeft: "5px" }}
+      >
         <input
           onChange={(e) => setSearchInput(e.target.value)}
           value={searchInput}
           placeholder="Search"
           type="text"
+          style={{
+            width: "100%",
+            height: "100%",
+            outline: "none",
+            paddingLeft: "5px",
+          }}
         />
         <Link to={`/search/${searchInput}`}>
           <SearchIcon className="header_inputButton" />
