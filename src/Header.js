@@ -20,6 +20,7 @@ const Header = () => {
             className="header_logo"
           />
         </Link>
+        
       </div>
 
       <div
